@@ -1,0 +1,161 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  	<filter-name>ProfilePageOnlyLoggedUsers</filter-name>
+  	<display-name>ProfilePageOnlyLoggedUsers</display-name>
+  	<description></description>
+  	<filter-class>Filters.ProfilePageOnlyLoggedUsers</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>editProfileFilter</filter-name>
+  	<display-name>editProfileFilter</display-name>
+  	<description></description>
+  	<filter-class>Filters.editProfileFilter</filter-class>
+  </filter>
+  <filter>
+  	<filter-name>loginRegisterFilter</filter-name>
+  	<display-name>loginRegisterFilter</display-name>
+  	<description></description>
+  	<filter-class>Filters.loginRegisterFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>ProfilePageOnlyLoggedUsers</filter-name>
+  	<url-pattern>/ProfilePageOnlyLoggedUsers</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>editProfileFilter</filter-name>
+  	<url-pattern>/editProfileFilter</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+  	<filter-name>loginRegisterFilter</filter-name>
+  	<url-pattern>/loginRegisterFilter</url-pattern>
+  </filter-mapping>
+  <servlet>
+  	<servlet-name>editProfile</servlet-name>
+  	<display-name>editProfile</display-name>
+  	<description></description>
+  	<servlet-class>controler.editProfile</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EditProfile</servlet-name>
+  	<display-name>EditProfile</display-name>
+  	<description></description>
+  	<servlet-class>controler.editProfile</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>logout</servlet-name>
+  	<display-name>logout</display-name>
+  	<description></description>
+  	<servlet-class>controler.logout</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>cookie</servlet-name>
+  	<display-name>cookie</display-name>
+  	<description></description>
+  	<servlet-class>controler.cookie</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UserList</servlet-name>
+  	<display-name>UserList</display-name>
+  	<description></description>
+  	<servlet-class>controler.UserList</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>profile</servlet-name>
+  	<display-name>profile</display-name>
+  	<description></description>
+  	<servlet-class>controler.profile</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ErrorHandler</servlet-name>
+  	<display-name>ErrorHandler</display-name>
+  	<description></description>
+  	<servlet-class>controler.ErrorHandler</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>editProfileBlock2</servlet-name>
+  	<display-name>editProfileBlock2</display-name>
+  	<description></description>
+  	<servlet-class>controler.editProfileBlock2</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>editProfileBlock3</servlet-name>
+  	<display-name>editProfileBlock3</display-name>
+  	<description></description>
+  	<servlet-class>controler.editProfileBlock3</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>editProfileBlock4</servlet-name>
+  	<display-name>editProfileBlock4</display-name>
+  	<description></description>
+  	<servlet-class>controler.editProfileBlock4</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>editProfile</servlet-name>
+  	<url-pattern>/editProfile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EditProfile</servlet-name>
+  	<url-pattern>/EditProfile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>logout</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>cookie</servlet-name>
+  	<url-pattern>/cookie</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UserList</servlet-name>
+  	<url-pattern>/UserList</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>profile</servlet-name>
+  	<url-pattern>/profile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ErrorHandler</servlet-name>
+  	<url-pattern>/ErrorHandler</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>editProfileBlock2</servlet-name>
+  	<url-pattern>/editProfileBlock2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>editProfileBlock3</servlet-name>
+  	<url-pattern>/editProfileBlock3</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>editProfileBlock4</servlet-name>
+  	<url-pattern>/editProfileBlock4</url-pattern>
+  </servlet-mapping>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/ErrorHandler</location>
+</error-page>
+<error-page>
+    <error-code>403</error-code>
+    <location>/ErrorHandler</location>
+</error-page>
+<error-page>
+    <error-code>500</error-code>
+    <location>/ErrorHandler</location>
+</error-page>
+<!-- exception-type related error pages -->
+<error-page>
+    <exception-type>
+        javax.servlet.ServletException
+    </exception-type>
+    <location>/ErrorHandler</location>
+</error-page>
+<error-page>
+    <exception-type>java.io.IOException</exception-type>
+    <location>/ErrorHandler</location>
+</error-page>
+ 
+</web-app>
